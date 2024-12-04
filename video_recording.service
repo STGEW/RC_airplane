@@ -1,0 +1,12 @@
+[Unit]
+Description=Video Recording Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/camera/camera_recorder.py
+User=camera
+WorkingDirectory=/home/camera
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
